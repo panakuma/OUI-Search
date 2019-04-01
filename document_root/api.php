@@ -17,8 +17,8 @@
       $stmt -> execute([$MAC]);
       $result = $stmt->fetchAll();
       $data[] = array(
-        'Vender code' = $MAC,
-        'Vender name' = $result['vender']
+        'Vender code' => $MAC,
+        'Vender name' => $result['vender']
       );
       header('Content-type: application/json');
       echo json_encode($data, JSON_UNESCAPED_UNICODE);
