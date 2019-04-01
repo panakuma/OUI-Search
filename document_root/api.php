@@ -1,7 +1,7 @@
 <?php
   try{
     # GETリクエストからMACアドレスをもらう
-    $_GET["MAC"] = $MAC
+    $_GET["MAC"] = $MAC;
 
     # OUIデータベースに接続(SQLite)
     $dbcon = new PDO("sqlite:../oui.db");
