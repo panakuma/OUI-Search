@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <!-- <link rel="stylesheet" type="text/css" href="skeleton.css"> -->
+  <link rel="stylesheet" type="text/css" href="skeleton.css">
   <link rel="stylesheet" type="text/css" href="main.css">
   <script>
-    document.addEventListener("DOMContentLoaded", (event) => {
+    document.addEventListener("DOMContentLoaded", function (event) {
       function getOUI() {
         const mac = document.getElementById("input").value;
         fetch('./api.php?mac=' + mac)
@@ -29,18 +29,18 @@
 <body>
   <div class="container">
     <p id="venderCode">ベンダーコード</p>
-    <p id="venderCodeValue"><br></p>
+    <p id="venderCodeValue"></p>
     <p id="venderName">ベンダーネーム</p>
-    <p id="venderNameValue"><br></p>
+    <p id="venderNameValue"></p>
     <hr>
-      <label for="input">MACアドレス or ベンダーコード</label>
-      <div class="input-form">
-        <input id="input" class="input-box">
-        <a class="btn-flat-border" id="submit">検索</a>
+    <form>
+      <div class="six columuns" id="raw">
+        <label for="input">MACアドレス or ベンダーコード</label>
+        <input id="input" class="u-full-width">
       </div>
+      <a class="button button-primary" id="submit">検索</a>
+    </form>
   </div>
-<footer>
-COPYRIGHT &#169; パナくま 2019 ALL RIGHTS RESERVED.
-</footer>
 </body>
+
 </html>
